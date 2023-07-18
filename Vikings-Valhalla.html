@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!--=============== REMIXICONS ===============-->
+      <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+
+      <!--=============== CSS ===============-->
+      <link rel="stylesheet" href="assets/css/styles.css">
+
+      <title>Responsive dropdown menu - Bedimcode</title>
+   </head>
+   <body>
+      <!--=============== HEADER ===============-->
+      <header class="header">
+         <nav class="nav container">
+            <div class="nav__data">
+               <a href="index.html" class="nav__logo">
+                  <img src="cloud.png" alt="cloudlogo">  
+               </a>
+               
+               <div class="nav__toggle" id="nav-toggle">
+                  <i class="ri-menu-line nav__burger"></i>
+                  <i class="ri-close-line nav__close"></i>
+               </div>
+            </div>
+
+            <!--=============== NAV MENU ===============-->
+            <div class="nav__menu" id="nav-menu">
+               <ul class="nav__list">
+                  <li><a href="index.html" class="nav__link">Home</a></li>
+
+                  <li><a href="sports.html" class="nav__link">Sports</a></li>
+
+                  <!--=============== DROPDOWN 1 ===============-->
+                  <li class="dropdown__item">
+                     <div class="nav__link">
+                        Filmes <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                     </div>
+
+                     <ul class="dropdown__menu">
+                        <li>
+                           <a href="channelsmovie.html" class="dropdown__link">
+                              <i class=""></i> Canais
+                           </a>                          
+                        </li>
+
+                        <li>
+                           <a href="series.html" class="dropdown__link">
+                              <i class="">Séries </i> 
+                           </a>
+                        </li>
+                        <li>
+                           <a href="filme.html" class="dropdown__link">
+                              <i class="">Filmes </i> 
+                           </a>
+                        </li>
+                        <!--=============== DROPDOWN SUBMENU ===============-->
+                        <li class="dropdown__subitem">
+                           <div class="dropdown__link">
+                              <i class=""></i> Apps <i class="ri-add-line dropdown__add"></i>
+                           </div>
+
+                           <ul class="dropdown__submenu">
+                              <li>
+                                 <a href="hbo.html" class="dropdown__sublink">
+                                    <i class="ri-file-list-line"></i> HBO
+                                 </a>
+                              </li>
+      
+                              <li>
+                                 <a href="discovery.html" class="dropdown__sublink">
+                                    <i class="ri-cash-line"></i> Discovery+
+                                 </a>
+                              </li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </li>
+                  
+                  <!--=============== DROPDOWN 2 ===============-->
+                  <li class="dropdown__item">
+                     <div class="nav__link">
+                        Usuário <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                     </div>
+
+                     <ul class="dropdown__menu">
+                        <li>
+                           <a href="perfil.html" class="dropdown__link">
+                              <i class="ri-user-line"></i> Perfil
+                           </a>                          
+                        </li>
+
+                        <li>
+                           <a href="conta.html" class="dropdown__link">
+                              <i class="ri-lock-line"></i> Conta
+                           </a>
+                        </li>
+
+                        <li>
+                           <a href="mensagem.html" class="dropdown__link">
+                              <i class="ri-message-3-line"></i> Mensagem
+                           </a>
+                        </li>
+                     </ul>
+                  </li>
+
+                  <li><a href="sobre.html" class="nav__link">Sobre</a></li>
+               </ul>
+            </div>
+         </nav>
+      </header>
+
+<main>
+    <div id="embedderContainerVideo"></div>
+
+
+</main>
+<script>
+    var type = "serie";
+    var imdb = "tt2442560";
+    var season = "1";
+    var episode = "1";
+    embedderJSPlugin(type, imdb, season, episode);
+    function embedderJSPlugin(type, imdb, season, episode){
+    if (type == "filme") { season="";episode="";}else{if (season !== "") { season = "/"+season; }if (episode !== "") { episode = "/"+episode; }}
+        var frame = document.getElementById('embedderContainerVideo'); 
+        frame.innerHTML += '<iframe src="https://embedflix.net/serie/tt11311302" style="width: 100%; height: 500px; scrolling="no"  frameborder="0" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen=""></iframe>';
+    }
+    </script>
+    
+    
+
+      <!--=============== MAIN JS ===============-->
+      <script src="assets/js/main.js"></script>
+   </body>
+</html>
+
